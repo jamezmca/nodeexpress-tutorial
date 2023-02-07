@@ -1,0 +1,17 @@
+###
+DELETE http://localhost:4999/delete?id=9
+
+###
+POST http://localhost:4999/api/info?id=8
+Content-Type: application/json
+
+{
+    "information": "my name is james"
+}
+###
+
+PUT http://localhost:4999/api/?word=james&banana=ripe
+
+
+###
+DELETE http://localhost:4999/delete/james/cool

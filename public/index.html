@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    THIS IS TEMP
+    <button id="nice">
+        SEND
+    </button>
+</body>
+<script>
+
+    const btn = document.getElementById('nice')
+    async function sendMsg(){
+        const res = await fetch('/api/info', {
+            method: 'POST',
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({information: 'THIS IS FROM THE WEB CLIENT'})
+        })
+        console.log('REQUEST SENT')
+    }
+    btn.addEventListener('click', sendMsg)
+</script>
+
+</html>
